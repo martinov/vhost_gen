@@ -1,0 +1,21 @@
+# VirtualHost definition generated with drush vhg:
+
+<VirtualHost *:80>
+        !ServerAdmin
+        ServerName !ServerName
+
+        DocumentRoot !DocumentRoot
+
+        <Directory !DocumentRoot/>
+                Options Indexes FollowSymLinks MultiViews
+                AllowOverride All
+                Order allow,deny
+                allow from all
+        </Directory>
+
+        ErrorLog ${APACHE_LOG_DIR}/!ServerName-error.log
+
+        LogLevel !LogLevel
+
+        CustomLog ${APACHE_LOG_DIR}/!ServerName-access.log combined
+</VirtualHost>
